@@ -1,0 +1,2 @@
+# modules/ecr/variables.tf
+
