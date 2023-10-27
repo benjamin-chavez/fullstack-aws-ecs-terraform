@@ -1,2 +1,1 @@
-# modules/ecr/variables.tf
-
+# modules/vpc/outputs.tf

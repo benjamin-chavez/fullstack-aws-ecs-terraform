@@ -1,2 +1,0 @@
-# modules/acm/outputs.tf
-

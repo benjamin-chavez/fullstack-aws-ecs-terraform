@@ -1,32 +1,10 @@
-// modules/ecs/client/main.ts
+// modules/ecr/main.tf
 
+/*=========================================
+      AWS Elastic Container Repository
+==========================================*/
 
-resource "aws_ecr_repository" "audio_archive_nextjs_client" {
-  name                 = "audio-archive-nextjs-client-repo"
+resource "aws_ecr_repository" "ecr_repository" {
+  name                 = var.name
   image_tag_mutability = "MUTABLE"
-
-  image_scanning_configuration {
-    scan_on_push = true
-  }
-
-  tags = {
-    "Project"   = "Audio-Archive"
-    "Env"       = "Development"
-    "DockerTag" = "latest"
-  }
-}
-
-resource "aws_ecr_repository" "audio_archive_express_server" {
-  name                 = "audio-archive-express-server-repo"
-  image_tag_mutability = "MUTABLE"
-
-  image_scanning_configuration {
-    scan_on_push = true
-  }
-
-  tags = {
-    "Project"   = "Audio-Archive"
-    "Env"       = "Development"
-    "DockerTag" = "latest"
-  }
 }
